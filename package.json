@@ -1,6 +1,6 @@
 {
   "name": "@sleepfinance/chain",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Sleepfinance Chains",
   "keywords": [
     "sleep.finance",
@@ -20,7 +20,7 @@
     "check": "tsc --pretty --noEmit",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "dev": "tsup index.ts --format esm,cjs --watch --dts",
-    "generate": "ls chains.ts || ts-node generate.ts",
+    "generate": "ls ./chains.ts || node generate.js",
     "preinstall": "pnpm run generate",
     "lint": "TIMING=1 eslint ./index.ts --fix",
     "test": "jest --passWithNoTests"
